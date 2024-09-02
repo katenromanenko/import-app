@@ -1,6 +1,7 @@
 package com.example.importapp.service;
 
 import com.example.importapp.model.Client;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
@@ -19,6 +20,7 @@ public class ClientService {
     @Value("${old.system.url}")
     private String oldSystemUrl;
 
+    @Autowired
     public ClientService(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
     }
